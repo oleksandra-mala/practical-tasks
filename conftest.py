@@ -9,7 +9,7 @@ def base_url():
 def api_client(base_url):
     session = requests.Session()
     session.headers.update({
-        "x-api-key": 'reqres_c1f61551245340e9ba114b43d8f6d15b',
+        "x-api-key": 'pro_e6006bd8574cee9510665b23fc5430e4ba397d08e4c0992b1b05d9c1f5147ab1',
         "Content-Type": "application/json"
     })
     yield session
