@@ -17,3 +17,7 @@ def api_client(base_url):
     })
     yield session
     session.close()
+
+@pytest.fixture(scope="session")
+def auth_token():
+    
