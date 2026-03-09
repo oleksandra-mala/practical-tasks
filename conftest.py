@@ -1,5 +1,6 @@
 import pytest
 import requests
+import logging
 
 
 
@@ -10,14 +11,17 @@ def base_url():
 
 @pytest.fixture(scope="session")
 def api_client(base_url):
+    logging.info("Test started")
     session = requests.Session()
     session.headers.update({
-        "x-api-key": 'pub_90e18fe41c093dff780bafe29a201ae015c5068c10fc8f108285e2b94dd34727',
+        "x-api-key": 'reqres_c1f61551245340e9ba114b43d8f6d15b',
         "content-type": "application/json"
     })
+    payload = {"email": "eve.holt@reqres.in", "password": "cityslicka"}
+    session.post(url=f'{base_url}/login', json=payload)
+    logging.info("Token successfully received")
     yield session
     session.close()
+    logging.info("Test finished - starting cleanup")
 
-@pytest.fixture(scope="session")
-def auth_token():
-    
+

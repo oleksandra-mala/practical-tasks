@@ -1,6 +1,3 @@
-from conftest import api_client
-
-
 def test_get_users(api_client, base_url):
     response = api_client.get(f"{base_url}/users/1")
     assert response.status_code == 200
@@ -13,3 +10,5 @@ def test_get_user_by_id(api_client, base_url):
     assert response.status_code == 200
     data = response.json()
     assert data['data']['first_name'] == 'George'
+
+
