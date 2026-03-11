@@ -11,7 +11,6 @@ def base_url():
 
 @pytest.fixture(scope="session")
 def api_client(base_url):
-    logging.info("Test started")
     session = requests.Session()
     session.headers.update({
         "x-api-key": 'reqres_c1f61551245340e9ba114b43d8f6d15b',
@@ -19,9 +18,7 @@ def api_client(base_url):
     })
     payload = {"email": "eve.holt@reqres.in", "password": "cityslicka"}
     session.post(url=f'{base_url}/login', json=payload)
-    logging.info("Token successfully received")
     yield session
     session.close()
-    logging.info("Test finished - starting cleanup")
 
 
