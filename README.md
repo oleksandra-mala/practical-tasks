@@ -14,3 +14,10 @@ Project Structure:
 conftest.py
 requirements.txt
 README.md
+
+Submission Requirements:
+Code follows PEP8 formatting
+Fixtures are used, with yield for setup/teardown
+Pytest command-line works:
+pytest tests/api
+pytest tests/ui
