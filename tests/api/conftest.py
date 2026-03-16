@@ -12,7 +12,7 @@ def base_url():
 def api_client(base_url):
     session = requests.Session()
     session.headers.update({
-        "x-api-key": 'reqres_c1f61551245340e9ba114b43d8f6d15b',
+        "x-api-key": 'pro_aa28b04e2f3c40c5cec3b2ef8a8e59a5cec718f56508b97edf45a9b78f8fe0e6',
         "content-type": "application/json"
     })
     payload = {"email": "eve.holt@reqres.in", "password": "cityslicka"}
