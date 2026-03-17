@@ -1,5 +1,5 @@
 from playwright.sync_api import sync_playwright
-from pages.locators import LoginPage
+from pages.login_page import LoginPage
 
 def run():
     with sync_playwright() as p:
