@@ -19,5 +19,3 @@ def api_client(base_url):
     session.post(url=f'{base_url}/login', json=payload)
     yield session
     session.close()
-
-
