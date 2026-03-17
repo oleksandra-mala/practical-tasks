@@ -10,6 +10,11 @@ def run():
         login_page.open()
         login_page.login("tomsmith", "SuperSecretPassword!")
 
+        if login_page.is_logged_in():
+            print("Login successful")
+        else:
+            print("Login failed")
+
         browser.close()
 
 run()
