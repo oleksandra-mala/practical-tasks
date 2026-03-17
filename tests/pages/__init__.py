@@ -1,2 +1,0 @@
-def locators():
-    return None
